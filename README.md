@@ -1,4 +1,4 @@
-# AnoInsta
+# AnoInsta V2.6
 
 Il est important de noter que l'utilisation de Anoinsta ou tout autre outil de sécurité doit être légale et éthique. Il doit être utilisé avec l'autorisation appropriée et dans le cadre des lois et réglementations en vigueur. L'utilisation non autorisée de tels outils peut avoir des conséquences graves, y compris des poursuites légales.
 Il est important de noter que les attaques de force brute sont illégales lorsqu'elles sont effectuées sans autorisation sur des systèmes ou des comptes appartenant à d'autres personnes.
