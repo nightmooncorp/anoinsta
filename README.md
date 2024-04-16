@@ -40,7 +40,7 @@ $ git clone https://github.com/layomoons/anoinsta.git
 
 ```console
 $ cd anoinsta
-$ python3 Anoinsta.py
+$ python3 AnoInsta.py
 ```
 <p>
    
