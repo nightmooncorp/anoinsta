@@ -33,7 +33,7 @@ Disponible:
 
 ```console
 # clone the repo
-$ git clone https://github.com/layomoons/anoinsta.git
+$ git clone https://github.com/nightmooncorp/anoinsta.git
 ```
 
 ## Commandes
